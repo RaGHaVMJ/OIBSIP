@@ -53,7 +53,7 @@
 <body>
     <h1>Convertor</h1>
     <form id="tempcalc" onsubmit="calculateTemp(); return false">
-        <!-- i write return false" to hold the o/p -->
+        
         <label for="temp">Please Enter the Temp. :</label>
         <br>
         <input type="number" id="temp" name="temp">
@@ -70,13 +70,11 @@
 
     <script>
         const calculateTemp = () => {
-            const temp = document.getElementById('temp').value; //1st i read the value which user enters
-            // console.log(temp);
+            const temp = document.getElementById('temp').value; 
 
             const tempselected = document.getElementById('temp_diff');
             const valuetemp = temp_diff.options[tempselected.selectedIndex].value;
-            // console.log(valuetemp); //(?temp=10&temp_diff=fer&temp=Submit)
-            //                         in the link of website we get the values we get
+           
 
 
             const celltofer = (cel) => {
