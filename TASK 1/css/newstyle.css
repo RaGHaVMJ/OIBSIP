@@ -1,0 +1,265 @@
+*
+{
+	font-family: 'Raleway', sans-serif;
+}
+a
+{
+	color: orange;
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+section
+{
+	display: block;
+	padding-top: 75px;
+}
+.container
+{
+	width: 970px;
+	margin: auto;
+	padding-top: 75px;
+}
+.container h3
+{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0;
+	text-align: center;
+}
+.container h4
+{
+	font-size: 15px;
+	margin: 20px 0;
+	text-align: center; 
+}
+
+/*header*/
+
+.header-container,
+.footer-container
+{
+	display: flex;
+	flex-direction: row;
+	width: 970px;
+	margin: auto;
+}
+header
+{
+	background-color: #222;
+	width: 100%;
+	height: 75px;
+	padding: 20px;
+	position: fixed;
+	z-index: 300;
+}
+header #company-logo
+{
+	flex: 2;
+}
+header h1
+{
+	font-size: 25px;
+	font-weight: thin;
+	font-family: "rock salt" , cursive;
+	color: #ddd;
+	line-height: 35px;
+	text-shadow: 1px 1px 3px #333;
+}
+header .menu-wrapper
+{
+	line-height: 35px;
+	text-align: right;
+}
+header nav ul li
+{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+/*hero image*/
+
+#hero-image
+{
+	height: 100vh;
+	background: #000 url(../img/hero.jpg) no-repeat fixed bottom;
+	background-size: cover;
+	position: relative;
+}
+.overlay
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.tag-line
+{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bolder;
+	color: #ccc;
+	text-transform: uppercase;
+	
+}
+
+/*top button*/
+
+#topButton
+{
+	
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+#topButton:hover
+{
+	background-color: #555;
+}
+
+
+
+#our-story
+{
+	padding: 25px 0px;
+}
+#our-story p
+{
+	text-align: justify;
+}
+
+/*gallery*/
+
+#gallery
+{
+	background-color: #333;
+	color: #fff;
+	padding: 25px 0;
+	text-align: center;
+}
+.gallery-row
+{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+	justify-content: space-evenly;
+}
+.gallery-item
+{
+	flex: 1;
+	flex-basis: 33%;
+}
+.gallery-descripton
+{
+	margin-bottom: 20px;
+}
+
+
+
+#events
+{
+	background-color: #eee;
+	padding: 25px 0;
+}
+#Upcoming-events-table
+{
+	width: 100%;
+	border-spacing: 10px;
+	border-collapse: separate;
+	margin-bottom: 20px;
+}
+#Upcoming-events-table th
+{
+	text-align: left;
+	font-weight: bolder;
+}
+
+/*contact*/
+
+#contact
+{
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+#contact fieldset
+{
+	width: 80%;
+	margin: auto;
+	background-color: #eee;
+	padding: 20px;
+	box-shadow: 0 0 4px #eee;
+}
+#contact p
+{
+	text-align: center;
+	margin-bottom: 10px; 
+}
+#contact input ,
+#contact textarea
+{
+	margin-bottom: 20px;
+	padding: 5px;
+	border-radius: 5px;
+	
+}
+#contact input
+{
+	height: 40px;
+}
+#contact textarea
+{
+	height: 200px;
+}
+#contact button
+{
+	width: 100%;
+	
+}
+#contact button:hover
+{
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+}
+
+/*footer*/
+
+footer
+{
+	background-color: #222;
+	position: relative;
+	height: 100px;
+}
+footer .menu-wrapper
+{
+	flex: 1;
+	line-height: 35px;
+	text-align: left;
+}
+footer nav ul li
+{
+	display: inline-block;
+	margin: 20px;
+	padding: 0 10px;
+	
+}
+footer #copyright
+{
+	color: white;
+	line-height: 100px;
+}

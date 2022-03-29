@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertor</title>
+    <style>
+        body {
+            background-color: #2a364f;
+            text-align: center;
+        }
+        
+        p,
+        h1 {
+            color: white;
+            font-family: sans-serif;
+            font-size: 100px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            color: blanchedalmond;
+            background-color: crimson;
+            border: 2px solid black;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        
+        label {
+            color: white;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+        
+        span {
+            color: yellow;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+        
+        input {
+            padding: 10px 15px;
+        }
+        
+        #temp_diff {
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Convertor</h1>
+    <form id="tempcalc" onsubmit="calculateTemp(); return false">
+        <!-- i write return false" to hold the o/p -->
+        <label for="temp">Please Enter the Temp. :</label>
+        <br>
+        <input type="number" id="temp" name="temp">
+
+        <select name="temp_diff" id="temp_diff">
+            <option value="cel">Celsius</option>
+            <option value="fer">Ferhenite</option>
+        </select><br /><br />
+
+        <input type="Submit" name="temp"><br /><br />
+
+        <span id="spanresult"></span>
+    </form>
+
+    <script>
+        const calculateTemp = () => {
+            const temp = document.getElementById('temp').value; //1st i read the value which user enters
+            // console.log(temp);
+
+            const tempselected = document.getElementById('temp_diff');
+            const valuetemp = temp_diff.options[tempselected.selectedIndex].value;
+            // console.log(valuetemp); //(?temp=10&temp_diff=fer&temp=Submit)
+            //                         in the link of website we get the values we get
+
+
+            const celltofer = (cel) => {
+                let Ferhenite = (cel * 9 / 5) + 32;
+                return Ferhenite;
+                //(0°C × 9/5) + 32 = 32°F
+            }
+            const fertocell = (fer) => {
+                let celcius = ((fer - 32) * 9 / 5);
+                return celcius;
+                //(32°F − 32) × 5/9 = 1°C
+            }
+
+
+            let result;
+            if (valuetemp == 'cel') {
+                result = celltofer(temp);
+                document.getElementById('spanresult').innerHTML = `${temp}cel = ${result}fer `;
+            } else {
+                result = fertocell(temp);
+                document.getElementById('spanresult').innerHTML = `${temp}fer = ${result}cel `;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
